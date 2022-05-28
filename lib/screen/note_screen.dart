@@ -5,6 +5,13 @@ import 'package:flutter_note/widgets/widgets.dart';
 import 'package:flutter_note/screen/screeen.dart';
 
 class NoteScreen extends StatelessWidget {
+  /*@override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: NoteScreen(),
+    );
+  }*/
+
   const NoteScreen({Key? key}) : super(key: key);
 
   @override
@@ -16,7 +23,7 @@ class NoteScreen extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => AddScreen(),
+              builder: (context) => const AddScreen(),
             ),
           );
         },
@@ -35,15 +42,19 @@ class NoteScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
-      body: Consumer<NotesOperation>(
-        builder: (context, NotesOperation data, child) {
-          return ListView.builder(
-            itemCount: data.getNotes.length,
-            itemBuilder: (context, index) {
-              return NotesCard(data.getNotes[index]);
-            },
-          );
-        },
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height * 0.4,
+        child: Consumer<NotesOperation>(
+          builder: (context, NotesOperation data, child) {
+            return ListView.builder(
+              itemCount: data.getNotes.length,
+              itemBuilder: (context, index) {
+                return NotesCard(data.getNotes[index]);
+              },
+            );
+          },
+        ),
       ),
     );
   }
