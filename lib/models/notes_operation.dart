@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_note/models/note.dart';
 
 class NotesOperation with ChangeNotifier {
-  List<Note> _notes = [];
+  final List<Note> _notes = [];
 
   List<Note> get getNotes {
     return _notes;
