@@ -20,12 +20,12 @@ class NotesCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            note.title,
+            note.judul,
             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 5),
           Text(
-            note.description,
+            note.deskripsi,
             style: const TextStyle(fontSize: 17),
           ),
         ],
