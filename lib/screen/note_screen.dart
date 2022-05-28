@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_note/models/models.dart';
 import 'package:flutter_note/widgets/widgets.dart';
+import 'package:flutter_note/screen/screeen.dart';
 
 class NoteScreen extends StatelessWidget {
   const NoteScreen({Key? key}) : super(key: key);
