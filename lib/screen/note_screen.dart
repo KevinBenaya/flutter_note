@@ -19,12 +19,12 @@ class NoteScreen extends StatelessWidget {
             ),
           );
         },
-        child: Icon(Icons.add, size: 30, color: Colors.blueGrey),
+        child: const Icon(Icons.add, size: 30, color: Colors.blueGrey),
         backgroundColor: Colors.white,
       ),
       appBar: AppBar(
-        title: Text(
-          'Task Manager',
+        title: const Text(
+          'KelasKu',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
